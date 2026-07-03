@@ -167,7 +167,7 @@ header.masthead.hero-band{
   0%{background:var(--gold-dim);}
   100%{background:transparent;}
 }
-tr:target, tr[id]:target{animation:rowflash 2s ease-out;}
+:target{animation:rowflash 2s ease-out;}
 .btn{
   display:inline-flex;
   align-items:center;
@@ -246,7 +246,7 @@ td.num{font-variant-numeric:tabular-nums; text-align:right;}
   overflow:hidden;
 }
 .agreed-item summary{
-  display:flex; align-items:center; gap:10px;
+  display:flex; align-items:center; gap:10px; flex-wrap:wrap; row-gap:6px;
   padding:12px 16px;
   font:600 14.5px/1.4 'Public Sans',sans-serif;
   color:var(--ink);
@@ -257,6 +257,8 @@ td.num{font-variant-numeric:tabular-nums; text-align:right;}
 .agreed-item summary::-webkit-details-marker{display:none;}
 .agreed-item summary:hover{background:var(--blue-dim);}
 .agreed-item summary .dot{width:10px; height:10px; border-radius:50%; background:var(--gold); flex:none;}
+.agreed-item summary .ti-title{flex:1 1 auto; min-width:140px;}
+.agreed-item summary .ti-owner{color:var(--ink-soft); font-weight:500; font-size:13px; white-space:nowrap;}
 .agreed-item summary::after{
   content:"⌄";
   margin-left:auto;

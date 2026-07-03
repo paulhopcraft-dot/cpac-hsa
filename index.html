@@ -45,20 +45,80 @@
     <section class="card spotlight" id="outstanding">
       <h2>Outstanding &amp; in progress</h2>
       <p class="sub">Pulled from the group chat — what's still open, who owns it, what's next.</p>
-      <div class="tablewrap">
-        <table>
-          <thead><tr><th>Item</th><th>Owner</th><th>Status</th></tr></thead>
-          <tbody>
-            <tr id="chip-sound"><td>Sound system — school to release remaining funds, Sir Paul to pick up from supplier</td><td>Paul / Principal</td><td><span class="status-pill open">In progress</span></td></tr>
-            <tr id="chip-tshirts"><td>Officer t-shirts — confirm back text &amp; price, place the order</td><td>Airene Rose</td><td><span class="status-pill open">In progress</span></td></tr>
-            <tr id="chip-stray"><td>Stray animal safety plan — perimeter fencing, campus cleanup. Full plan: <a href="poll.html">Stray Cats &amp; Dogs page →</a></td><td>To be assigned (Paul providing labor)</td><td><span class="status-pill open">Starting next week</span></td></tr>
-            <tr><td>Classroom window screening (keeps cats &amp; insects out)</td><td>To be assigned</td><td><span class="status-pill open">Proposed</span></td></tr>
-            <tr><td>Officer induction ceremony — confirm a date</td><td>Airene Rose / School</td><td><span class="status-pill open">Open</span></td></tr>
-            <tr id="chip-playground"><td>Playground for the children</td><td>Carlos Jr. (doc)</td><td><span class="status-pill open">Proposed</span></td></tr>
-          </tbody>
-        </table>
+      <div class="agreed-list">
+        <details class="agreed-item" id="chip-sound">
+          <summary>
+            <span class="dot"></span>
+            <span class="ti-title">Sound system</span>
+            <span class="ti-owner">Paul / Principal</span>
+            <span class="status-pill open">In progress</span>
+          </summary>
+          <div class="agreed-detail">
+            <p>Target is a JBL sound system (~₱45,000) plus a mic (~₱7,000). Paul donated ₱20,000 already; the school promised to cover the rest as a refund tied to last year's iLearn payments.</p>
+            <p><strong>Next action:</strong> Paul spoke to the principal on July 2 — hoping to pick it up next week from the supplier (Jvs) once the school releases the remaining funds. Target is to have it ready before the induction ceremony.</p>
+          </div>
+        </details>
+        <details class="agreed-item" id="chip-tshirts">
+          <summary>
+            <span class="dot"></span>
+            <span class="ti-title">Officer t-shirts</span>
+            <span class="ti-owner">Airene Rose</span>
+            <span class="status-pill open">In progress</span>
+          </summary>
+          <div class="agreed-detail">
+            <p>Plain shirt (not polo, to keep the cost down), CPAC logo on the front. Back text and a possible motto are still being finalized — the group agreed to drop "HSA Officer" from the back since it's already on the front.</p>
+            <p><strong>Next action:</strong> Airene Rose is canvassing prices in Murcia (last reference was ₱350–400) before placing the order.</p>
+          </div>
+        </details>
+        <details class="agreed-item" id="chip-stray">
+          <summary>
+            <span class="dot"></span>
+            <span class="ti-title">Stray animal safety plan</span>
+            <span class="ti-owner">To be assigned</span>
+            <span class="status-pill open">Starting next week</span>
+          </summary>
+          <div class="agreed-detail">
+            <p>A parent was bitten by a stray cat on campus and needed rabies shots. The agreed approach is prevention, not culling: fence repair, campus clean-up, no dogs on campus, and screening classroom windows.</p>
+            <p><strong>Next action:</strong> Paul is providing the labor (bringing a helper down next week) — but no officer has taken ownership of seeing it through yet. <a href="poll.html">Full plan and breakdown →</a></p>
+          </div>
+        </details>
+        <details class="agreed-item">
+          <summary>
+            <span class="dot"></span>
+            <span class="ti-title">Classroom window screening</span>
+            <span class="ti-owner">To be assigned</span>
+            <span class="status-pill open">Proposed</span>
+          </summary>
+          <div class="agreed-detail">
+            <p>Jessa's idea, to keep cats (and insects/mosquitos) from getting into classrooms through the windows.</p>
+            <p><strong>Next action:</strong> Get quotes — could run as a per-classroom project once someone picks it up.</p>
+          </div>
+        </details>
+        <details class="agreed-item">
+          <summary>
+            <span class="dot"></span>
+            <span class="ti-title">Officer induction ceremony</span>
+            <span class="ti-owner">Airene Rose / School</span>
+            <span class="status-pill open">Open</span>
+          </summary>
+          <div class="agreed-detail">
+            <p>Ma'am Drocelyn raised this with Airene Rose — no date has been confirmed yet.</p>
+            <p><strong>Next action:</strong> The sound system purchase is being targeted to finish before the induction so it can be used there and presented to parents.</p>
+          </div>
+        </details>
+        <details class="agreed-item" id="chip-playground">
+          <summary>
+            <span class="dot"></span>
+            <span class="ti-title">Playground for the children</span>
+            <span class="ti-owner">Carlos Jr. (doc)</span>
+            <span class="status-pill open">Proposed</span>
+          </summary>
+          <div class="agreed-detail">
+            <p>Raised by Carlos Jr. at the July 3 meeting: <em>"Project suggestion ko is playground para sa mga bata"</em> — "My project suggestion is a playground for the children."</p>
+            <p><strong>Next action:</strong> Just a one-line proposal so far — no cost, location, or timeline discussed yet. Needs fleshing out at a future meeting.</p>
+          </div>
+        </details>
       </div>
-      <p class="note"><a href="poll.html">Full detail on the stray cats &amp; dogs plan →</a></p>
     </section>
 
     <section class="card" id="sections">
@@ -112,5 +172,20 @@
 
   <footer>CPAC HSA · <a href="SETUP.md">Setup notes for officers</a></footer>
 </div>
+<script>
+(function(){
+  function openTarget(){
+    var id = location.hash.slice(1);
+    if(!id) return;
+    var el = document.getElementById(id);
+    if(!el) return;
+    var details = el.tagName === 'DETAILS' ? el : el.closest('details');
+    if(details && !details.open){ details.open = true; }
+    if(el.scrollIntoView) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  window.addEventListener('hashchange', openTarget);
+  if(location.hash) openTarget();
+})();
+</script>
 </body>
 </html>
