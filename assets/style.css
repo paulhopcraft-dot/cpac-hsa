@@ -145,7 +145,7 @@ header.masthead.hero-band{
   list-style:none; margin:14px 0 0; padding:0;
   display:flex; flex-wrap:wrap; gap:8px;
 }
-.hero-chips li{
+.hero-chips a{
   display:flex; align-items:center; gap:7px;
   font:600 12.5px/1 'Public Sans',sans-serif;
   color:rgba(255,255,255,0.92);
@@ -153,8 +153,21 @@ header.masthead.hero-band{
   border:1px solid rgba(255,255,255,0.25);
   border-radius:999px;
   padding:7px 13px;
+  text-decoration:none;
+  transition:background .15s ease, border-color .15s ease, transform .15s ease;
+}
+.hero-chips a:hover{
+  background:rgba(255,255,255,0.2);
+  border-color:rgba(232,166,59,0.7);
+  transform:translateY(-1px);
 }
 .hero-chips .hc-dot{width:7px; height:7px; border-radius:50%; background:var(--gold); flex:none;}
+
+@keyframes rowflash{
+  0%{background:var(--gold-dim);}
+  100%{background:transparent;}
+}
+tr:target, tr[id]:target{animation:rowflash 2s ease-out;}
 .btn{
   display:inline-flex;
   align-items:center;
