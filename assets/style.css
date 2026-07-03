@@ -141,6 +141,20 @@ header.masthead.hero-band{
   margin:0;
 }
 .hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:6px;}
+.hero-chips{
+  list-style:none; margin:14px 0 0; padding:0;
+  display:flex; flex-wrap:wrap; gap:8px;
+}
+.hero-chips li{
+  display:flex; align-items:center; gap:7px;
+  font:600 12.5px/1 'Public Sans',sans-serif;
+  color:rgba(255,255,255,0.92);
+  background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:999px;
+  padding:7px 13px;
+}
+.hero-chips .hc-dot{width:7px; height:7px; border-radius:50%; background:var(--gold); flex:none;}
 .btn{
   display:inline-flex;
   align-items:center;
