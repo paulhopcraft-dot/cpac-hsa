@@ -45,6 +45,8 @@
     <section class="card spotlight" id="outstanding">
       <h2>Outstanding &amp; in progress</h2>
       <p class="sub">Pulled from the group chat — what's still open, who owns it, what's next.</p>
+      <div class="progress-track"><div class="progress-fill" id="outstanding-progress-fill"></div></div>
+      <p class="progress-label" id="outstanding-progress-label">Counting…</p>
       <div class="agreed-list">
         <details class="agreed-item" id="chip-sound">
           <summary>
@@ -185,6 +187,15 @@
   }
   window.addEventListener('hashchange', openTarget);
   if(location.hash) openTarget();
+
+  var pills = document.querySelectorAll('#outstanding .status-pill');
+  var total = pills.length;
+  var done = document.querySelectorAll('#outstanding .status-pill.done').length;
+  var pct = total ? Math.round((done / total) * 100) : 0;
+  var fill = document.getElementById('outstanding-progress-fill');
+  var label = document.getElementById('outstanding-progress-label');
+  if(fill) fill.style.width = pct + '%';
+  if(label) label.textContent = done + ' of ' + total + ' items done';
 })();
 </script>
 </body>
