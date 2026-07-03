@@ -9,9 +9,15 @@
 <body>
 <div class="wrap">
   <header class="masthead">
-    <span class="eyebrow">CPAC HSA</span>
-    <h1>Officers Hub</h1>
-    <p>Shared home for committee business — minutes, actions, and how the money's tracking. Each officer keeps their own section up to date.</p>
+    <div class="hero">
+      <span class="badge"><span class="dot"></span>CPAC HSA · Officers Hub</span>
+      <h1>Everything the committee needs, in one place.</h1>
+      <p class="lede">Minutes, actions, and how the money's tracking — shared by all six of us instead of scattered across Messenger threads. Each officer keeps their own section current.</p>
+      <div class="hero-actions">
+        <a href="poll.html" class="btn primary">Vote now — stray cats &amp; dogs →</a>
+        <a href="#sections" class="btn secondary">Jump to your section</a>
+      </div>
+    </div>
     <nav class="sitenav">
       <a href="index.html" class="current">Home</a>
       <a href="social.html">Social</a>
@@ -23,21 +29,33 @@
   </header>
 
   <main>
-    <section class="card">
+    <section class="card spotlight">
       <h2>Open right now</h2>
       <p class="sub">Vote before the next meeting.</p>
       <p><strong>What should we do about the stray cats and dogs?</strong> — <a href="poll.html">Cast your vote →</a></p>
     </section>
 
-    <section class="card">
+    <section class="card" id="sections">
       <h2>Sections</h2>
       <p class="sub">Each officer's page — minutes, actions, and what's planned.</p>
-      <ul class="plans">
-        <li><a href="social.html">Social</a> — events, fundraisers, community engagement</li>
-        <li><a href="finance.html">Finance</a> — running balance, income and expenses</li>
-        <li><a href="section-3.html">Section 3</a> — <em>rename this once your third area is confirmed</em></li>
-        <li><a href="section-4.html">Section 4</a> — <em>rename this once your fourth area is confirmed</em></li>
-      </ul>
+      <div class="section-grid">
+        <a class="section-tile" href="social.html">
+          <span class="name">Social</span>
+          <span class="desc">Events, fundraisers, community engagement</span>
+        </a>
+        <a class="section-tile" href="finance.html">
+          <span class="name">Finance</span>
+          <span class="desc">Running balance, income and expenses</span>
+        </a>
+        <a class="section-tile" href="section-3.html">
+          <span class="name">Section 3</span>
+          <span class="desc">Rename once your third area is confirmed</span>
+        </a>
+        <a class="section-tile" href="section-4.html">
+          <span class="name">Section 4</span>
+          <span class="desc">Rename once your fourth area is confirmed</span>
+        </a>
+      </div>
     </section>
 
     <section class="card">
