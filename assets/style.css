@@ -49,13 +49,6 @@ body{
 .wrap{max-width:920px; margin:0 auto; padding:0 24px 100px;}
 .wrap-wide{max-width:1180px;}
 
-.layout{display:grid; grid-template-columns:1fr 360px; gap:28px; align-items:start;}
-.sidebar{position:sticky; top:20px;}
-@media (max-width:860px){
-  .layout{display:block;}
-  .sidebar{position:static; margin-bottom:28px;}
-}
-
 h1,h2,h3{
   font-family:'Fraunces',Georgia,serif;
   font-weight:600;
@@ -131,7 +124,12 @@ header.masthead.hero-band{
   pointer-events:none;
 }
 .hero-band .wrap{padding:0; max-width:100%;}
-.hero-inner{max-width:920px; margin:0 auto; padding:0 16px; position:relative;}
+.hero-inner{max-width:1180px; margin:0 auto; padding:0 16px; position:relative;}
+.hero-grid{display:grid; grid-template-columns:1fr 380px; gap:36px; align-items:start;}
+@media (max-width:860px){
+  .hero-grid{display:block;}
+  .hero-sidebar{margin-top:28px;}
+}
 .hero{display:flex; flex-direction:column; gap:18px; padding-bottom:8px;}
 .hero .brandrow{margin-bottom:6px;}
 .hero .crest{height:88px; filter:drop-shadow(0 6px 18px rgba(0,0,0,0.35)) drop-shadow(0 0 24px rgba(232,166,59,0.45));}
