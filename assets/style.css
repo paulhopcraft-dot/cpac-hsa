@@ -143,16 +143,17 @@ header.masthead.hero-band{
 .hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:6px;}
 .hero-chips{
   list-style:none; margin:14px 0 0; padding:0;
-  display:flex; flex-wrap:wrap; gap:8px;
+  display:flex; flex-direction:column; gap:6px;
+  max-width:360px;
 }
 .hero-chips a{
-  display:flex; align-items:center; gap:7px;
+  display:flex; align-items:center; gap:9px;
   font:600 12.5px/1 'Public Sans',sans-serif;
   color:rgba(255,255,255,0.92);
   background:rgba(255,255,255,0.1);
   border:1px solid rgba(255,255,255,0.25);
-  border-radius:999px;
-  padding:7px 13px;
+  border-radius:8px;
+  padding:9px 13px;
   text-decoration:none;
   transition:background .15s ease, border-color .15s ease, transform .15s ease;
 }
