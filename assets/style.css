@@ -286,6 +286,16 @@ td.num{font-variant-numeric:tabular-nums; text-align:right;}
 .agreed-item summary .dot{width:10px; height:10px; border-radius:50%; background:var(--gold); flex:none;}
 .agreed-item summary .ti-title{flex:1 1 auto; min-width:140px;}
 .agreed-item summary .ti-owner{color:var(--ink-soft); font-weight:500; font-size:13px; white-space:nowrap;}
+.new-badge{
+  font:700 10.5px/1 'Public Sans',sans-serif;
+  letter-spacing:.04em;
+  color:var(--gold-deep);
+  background:var(--gold-dim);
+  padding:3px 8px;
+  border-radius:999px;
+  white-space:nowrap;
+  flex:none;
+}
 .agreed-item summary::after{
   content:"⌄";
   margin-left:auto;
