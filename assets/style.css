@@ -47,6 +47,14 @@ body{
   margin:0;
 }
 .wrap{max-width:920px; margin:0 auto; padding:0 24px 100px;}
+.wrap-wide{max-width:1180px;}
+
+.layout{display:grid; grid-template-columns:1fr 360px; gap:28px; align-items:start;}
+.sidebar{position:sticky; top:20px;}
+@media (max-width:860px){
+  .layout{display:block;}
+  .sidebar{position:static; margin-bottom:28px;}
+}
 
 h1,h2,h3{
   font-family:'Fraunces',Georgia,serif;
